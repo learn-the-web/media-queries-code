@@ -1,0 +1,48 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+h1 {
+  padding: 1em;
+
+  background-color: red;
+
+  font-family: sans-serif;
+}
+
+@media only screen and (min-width: 500px) {
+  /*
+    The CSS inside a media query will only be applied
+    when the condition above in the brackets is met
+
+    In this situation, only when the screen is 500 px wide or wider
+   */
+
+  h1 {
+    background-color: green;
+  }
+
+}
+
+/*
+  We generally want to use em-based media queries for our layouts
+  It helps us to not think in device specific widths and concentrate more on our content
+
+  http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
+ */
+@media only screen and (min-width: 40em) {
+  /*
+    With min-width media queries our CSS cascade becomes really apparent
+    Each media query will add onto the one above
+
+    In this situation, when our screen is over 40em it will apply all the other
+    CSS properties from above
+   */
+
+  h1 {
+    background-color: yellow;
+  }
+
+}
