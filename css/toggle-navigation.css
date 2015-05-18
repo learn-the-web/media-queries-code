@@ -1,0 +1,125 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font: normal 100%/1.5 Georgia,serif;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: #e2e2e2;
+  padding: 1em 0 40px;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: #ccc;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 15em;
+}
+
+.nav a {
+  display: block;
+  padding: 0.5em;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.nav-check {
+  position: absolute;
+  top: -3em;
+}
+
+.nav-check:checked ~ .nav {
+  display: block;
+}
+
+.nav-label {
+  cursor: pointer;
+  font-size: 1.25rem;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/nav-icon.svg");
+  background-size: 40px auto;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.nav-check:checked ~ .nav-label {
+  background-color: #ccc;
+  background-position: center bottom;
+}
+
+@media only screen and (min-width: 28em) {
+
+  .nav {
+    width: 100%;
+  }
+
+  .nav li {
+    float: left;
+    width: 50%;
+  }
+
+}
+
+@media only screen and (min-width: 35em) {
+
+  header {
+    padding-bottom: 0;
+  }
+
+  .nav-check,
+  .nav-label {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+    position: static;
+  }
+
+  .nav li {
+    display: inline-block;
+    float: none;
+    width: auto;
+  }
+
+}
