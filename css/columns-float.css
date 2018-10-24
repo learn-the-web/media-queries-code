@@ -31,29 +31,23 @@ figure {
 
 @media only screen and (min-width: 35em) {
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .col {
+    float: left;
     width: 50%;
   }
 
   .col:last-child {
-    width: 100%;
+    float: none;
+    width: auto;
   }
 
 }
 
 @media only screen and (min-width: 55em) {
 
-  .row {
-    flex-wrap: nowrap;
-  }
-
   .col,
   .col:last-child {
+    float: left;
     width: 33.3333%;
   }
 

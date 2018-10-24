@@ -34,18 +34,15 @@ h1 {
 }
 
 .nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   background-color: #ccc;
   display: none;
   position: absolute;
   right: 0;
   top: 100%;
   width: 15em;
-}
-
-.nav ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .nav a {
@@ -90,24 +87,20 @@ h1 {
   background-position: center bottom;
 }
 
-@media only screen and (min-width: 24em) {
+@media only screen and (min-width: 28em) {
 
   .nav {
     width: 100%;
   }
 
-  .nav ul {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .nav li {
+    float: left;
     width: 50%;
   }
 
 }
 
-@media only screen and (min-width: 30em) {
+@media only screen and (min-width: 35em) {
 
   header {
     padding-bottom: 0;
@@ -123,12 +116,9 @@ h1 {
     position: static;
   }
 
-  .nav ul {
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-
   .nav li {
+    display: inline-block;
+    float: none;
     width: auto;
   }
 
